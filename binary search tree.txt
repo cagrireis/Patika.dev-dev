@@ -1,0 +1,33 @@
+Soru:
+
+Proje 3
+[7, 5, 1, 8, 3, 6, 0, 9, 4, 2] dizisinin Binary-Search-Tree aşamalarını yazınız.
+
+Örnek: root x'dir. root'un sağından y bulunur. Solunda z bulunur vb.
+
+Çözüm:
+
+Öncelikle root seçmeliyim. Bunun için sayılarda olabildiğince ortada ve hem sağında hem solunda olabildiğince eşit eleman olan bir eleman seçmeliyim.
+
+Sıramızda 10 adet eleman var ve 4 sayısı diğer elemanlara kıyasla daha ortada ve üstte yazmış olduğum şartları sağlıyor.
+
+4'ten küçük 4, 4'ten büyük 5 eleman bulunmakta.
+
+Root olarak 4 sayısını seçtim.
+
+Sıralamaya başlayabilirim.
+
+Root'un solunda 2 ve sağında 6 bulunur. Çünkü 2, 4'ten küçük; 6 ise 4'ten büyüktür.
+
+2'nin sağında 3 bulunur çünkü 3, 2'den büyüktür.
+
+2'nin solunda 1 ve 1'in solunda 0 bulunur. Buradan sonra ilerlemez ve bu kısım burada son bulur.
+
+6'nın solunda 5 ve sağında 8 bulunur çünkü 5 6'dan küçük ve 8 6'dan büyüktür.
+
+5 daha fazla dallanmaz.
+
+8'in ise sağında 9, solunda ise 7 bulunur ve bunlar da dallanmaz burada sonlanır.
+
+
+

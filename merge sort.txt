@@ -1,0 +1,46 @@
+Soru:
+Proje 2
+[16,21,11,8,12,22] -> Merge Sort
+
+1 -) Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
+2 -) Big-O gösterimini yazınız.
+
+Çözümler: 
+
+
+1 - ) Merge Sort parçalara ayrılarak sıralanır ve birleştirilir.
+
+Öncelikle [16,21,11,8,12,22] dizisini ikiye ayıralım. 6 elemandan oluştuğu için 3'e 3 ayırıyorum.
+
+[16,21,11], [8,12,22] şeklinde ikiye ayırmış olduk. Şimdi ayırdığımız parçaları da ayırarak sıralamasını yapmalıyız.
+
+[16,21,11] parçasını [16,21] ve [11] şeklinde ayıralım. [8,12,22] parçasını ise [8,12] ve [22] şeklinde ayıralım.
+
+Şimdi böldüğüm bütün parçaları tekil eleman şeklinde ayırıp kendi içlerinde sıralamalıyım.
+
+[16,21], [16], [21] şeklinde ayrıldı bu parçaları sıralayalım. [16,21] şeklinde ayrılamdan önceki hali gibi birleşir.
+
+Elimizde [11] şeklinde bir parça vardı bunu [16,21] ile sıralı biçimde birleştirelim.  Her iki parçanın da en solundaki elemanın en küçük olduğunu bildiğimizden sadece 2 sorgulama sonucunda [11,16,21] oluştu.
+
+Ayırdığımız diğer parçalara gidelim. [8,12]; [8], [12] şeklinde ayrılır ve tekrar [8,12] şeklinde birleşir.
+
+Elimizde [22] şeklinde bir parça vardı bunu [8,12] ile sıralı biçimde birleştirelim. Her iki parçanın da en solundaki elemanın en küçük olduğunu bildiğimizden 2 sorgulama sonucunda [8,12,22] oluştu.
+
+Sıraladığımız [8,12,22] ve [11,16,21] parçalarını birleştirmeye geldi sıra.
+
+Biliyoruz ki [8,12,22] ve [11,16,21] parçalarının en solundaki elemanlar en küçük değere sahip bu şekilde daha kolay bir biçimde karşılaştırarak işlem yapılır.
+
+Sonuçta; [8,12,22] ve [11,16,21] parçalarının elemanları sadece 5 sorgulama sonucunda [8,11,12,16,21,22] şeklinde birleştirilip sıralanır.
+
+Sonuçta [8,11,12,16,21,22] oluşur.
+
+
+2 - ) Her adımda n-1 kadar işlem yapılır fakat time complexity şeklinde düşünüp O(n) olduğunu anlarız.
+
+O(n) işlemi her seferinde yarı defa yapılır yani 2 ** x = n ortaya çıkar.
+
+2 ** x = n işlemi ile eleman sayısı ve işlem sayısı içeren bir bağıntı kurulur buradan log2(n) = x'den bir bağıntı çıkar.
+
+İşlemimin time complexity'si bütün bir sistem için O(nlogn) olur.
+
+
